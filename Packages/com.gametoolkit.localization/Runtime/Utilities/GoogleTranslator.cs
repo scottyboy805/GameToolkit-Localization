@@ -99,7 +99,9 @@ namespace GameToolkit.Localization.Utilities
             Action<TranslationCompletedEventArgs> onCompleted,
             Action<TranslationErrorEventArgs> onError)
         {
+#pragma warning disable 0618
             if (www.isNetworkError || www.isHttpError)
+#pragma warning restore 0618
             {
                 if (onError != null)
                 {

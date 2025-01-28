@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using GameToolkit.Localization.Utilities;
+using System.Reflection;
 
 namespace GameToolkit.Localization.Editor
 {
@@ -269,7 +270,7 @@ namespace GameToolkit.Localization.Editor
         private void CreateLocalizedAssetPopup(Vector2 mousePosition)
         {
             var popupPosition = new Rect(mousePosition, Vector2.zero);
-            EditorUtility.DisplayPopupMenu(popupPosition, "Assets/Create/GameToolkit/Localization/", null);
+            EditorUtility.DisplayPopupMenu(popupPosition, "Assets/Create/GameToolkit Localization/", null);
         }
 
         private void RevealLocalizedAsset(AssetTreeViewItem assetTreeViewItem)

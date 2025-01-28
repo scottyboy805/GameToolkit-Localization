@@ -36,6 +36,10 @@ namespace GameToolkit.Localization.Editor
 
         private void OnEnable()
         {
+            // Check for all languages
+            //if (target is LocalizedText text && text.LocaleItems.Length == 0)
+                //AddLanguagesFromSettings();
+
             var assetValueType = ((LocalizedAssetBase)target).ValueType;
             m_LocaleItems = serializedObject.FindLocaleItemsProperty();
             if (m_LocaleItems != null)
@@ -110,6 +114,10 @@ namespace GameToolkit.Localization.Editor
                     menu.ShowAsContext();
                 };
             }
+
+
+            if(AddLanguagesFromSettings() > 0)
+                serializedObject.ApplyModifiedProperties();
         }
 
         public override void OnInspectorGUI()
@@ -135,17 +143,17 @@ namespace GameToolkit.Localization.Editor
             }
         }
 
-        private void AddAllLanguages()
+        private int AddAllLanguages()
         {
-            AddLanguages(LocalizationSettings.Instance.AllLanguages);
+            return AddLanguages(LocalizationSettings.Instance.AllLanguages);
         }
 
-        private void AddLanguagesFromSettings()
+        private int AddLanguagesFromSettings()
         {
-            AddLanguages(LocalizationSettings.Instance.AvailableLanguages);
+            return AddLanguages(LocalizationSettings.Instance.AvailableLanguages);
         }
 
-        private void AddLanguages(List<Language> languages)
+        private int AddLanguages(List<Language> languages)
         {
             var filteredLanguages = languages.Where(x => !IsLanguageExist(m_LocaleItems, x)).ToArray();
 
@@ -162,6 +170,7 @@ namespace GameToolkit.Localization.Editor
                 var localeItemLanguage = localeItem.FindLanguageProperty();
                 LanguageEditorUtility.SetLanguageProperty(localeItemLanguage, filteredLanguages[i]);
             }
+            return filteredLanguages.Length;
         }
     
         private static bool IsLanguageExist(SerializedProperty localeItemsProperty, Language language)

@@ -15,7 +15,7 @@ namespace GameToolkit.Localization
         private class TextLocaleItem : LocaleItem<string> { };
 
         [SerializeField]
-        private TextLocaleItem[] m_LocaleItems = new TextLocaleItem[2];
+        private TextLocaleItem[] m_LocaleItems = new TextLocaleItem[1];
 
         public override LocaleItemBase[] LocaleItems { get { return m_LocaleItems; } }
         
