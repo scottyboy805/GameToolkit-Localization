@@ -8,14 +8,14 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedText", menuName = "GameToolkit/Localization/Text")]
+    [CreateAssetMenu(fileName = "LocalizedText", menuName = "GameToolkit Localization/Text")]
     public class LocalizedText : LocalizedAsset<string>
     {
         [Serializable]
         private class TextLocaleItem : LocaleItem<string> { };
 
         [SerializeField]
-        private TextLocaleItem[] m_LocaleItems = new TextLocaleItem[1];
+        private TextLocaleItem[] m_LocaleItems = new TextLocaleItem[2];
 
         public override LocaleItemBase[] LocaleItems { get { return m_LocaleItems; } }
         

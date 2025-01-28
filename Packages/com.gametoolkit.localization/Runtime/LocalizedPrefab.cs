@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedPrefab", menuName = "GameToolkit/Localization/Prefab")]
+    [CreateAssetMenu(fileName = "LocalizedPrefab", menuName = "GameToolkit Localization/Prefab")]
     public class LocalizedPrefab : LocalizedAsset<GameObject>
     {
         [Serializable]

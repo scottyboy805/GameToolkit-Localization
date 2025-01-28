@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedAudioClip", menuName = "GameToolkit/Localization/AudioClip")]
+    [CreateAssetMenu(fileName = "LocalizedAudioClip", menuName = "GameToolkit Localization/AudioClip")]
     public class LocalizedAudioClip : LocalizedAsset<AudioClip>
     {
         [Serializable]

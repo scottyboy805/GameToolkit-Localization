@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedTexture", menuName = "GameToolkit/Localization/Texture")]
+    [CreateAssetMenu(fileName = "LocalizedTexture", menuName = "GameToolkit Localization/Texture")]
     public class LocalizedTexture : LocalizedAsset<Texture>
     {
         [Serializable]

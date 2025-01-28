@@ -11,7 +11,7 @@ namespace GameToolkit.Localization.Editor
     /// </summary>
     public static class EditorMenu
     {
-        public const string RootMenu = "Window/GameToolkit/Localization/";
+        public const string RootMenu = "Window/GameToolkit Localization/";
         
         private const string SetLocaleRootMenu = RootMenu + "Set Locale/";
 

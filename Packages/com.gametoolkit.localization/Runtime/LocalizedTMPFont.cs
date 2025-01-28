@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedFont", menuName = "GameToolkit/Localization/TMP Font")]
+    [CreateAssetMenu(fileName = "LocalizedFont", menuName = "GameToolkit Localization/TMP Font")]
     public class LocalizedFont : LocalizedAsset<TMP_FontAsset>
     {
         [Serializable]

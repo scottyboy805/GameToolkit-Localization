@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedSprite", menuName = "GameToolkit/Localization/Sprite")]
+    [CreateAssetMenu(fileName = "LocalizedSprite", menuName = "GameToolkit Localization/Sprite")]
     public class LocalizedSprite : LocalizedAsset<Sprite>
     {
         [Serializable]

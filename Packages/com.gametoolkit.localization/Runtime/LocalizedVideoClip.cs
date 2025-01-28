@@ -7,7 +7,7 @@ using UnityEngine.Video;
 
 namespace GameToolkit.Localization
 {
-    [CreateAssetMenu(fileName = "LocalizedVideoClip", menuName = "GameToolkit/Localization/VideoClip")]
+    [CreateAssetMenu(fileName = "LocalizedVideoClip", menuName = "GameToolkit Localization/VideoClip")]
     public class LocalizedVideoClip : LocalizedAsset<VideoClip>
     {
         [Serializable]
